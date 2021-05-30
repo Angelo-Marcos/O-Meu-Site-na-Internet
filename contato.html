@@ -1,57 +1,103 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Contato</title>
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-	</head>
-	<body>
+
+<head>
+	<title>Contato</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="shortcut icon" href="images/logo.jpg" type="image/png">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<id id="container">
 		<header>
-			<nav id="menu">
-			<ul>
-				<li class="item-menu"><a class="link-menu" href="index.html">HOME</a></li>
-				<li class="item-menu"><a class="link-menu" href="sobre.html">SOBRE</a></li>
-				<li class="item-menu"><a class="link-menu" href="buscar.html">BUSCAR UM PET</a></li>
-				<li class="item-menu"><a class="link-menu" href="contato.html">CONTATO</a></li>
-			</ul>
-		</nav>
+			<div id="logo">
+				<a href="index.html">
+					<img id="logo" src="images/logo.jpg" alt="Logo">
+				</a>
+			</div>
+
+			<h1>Contato</h1>
+
+			<input class="input-menu" id="menu-hamburguer" type="checkbox">
+			<label for="menu-hamburguer">
+				<div id="menu">
+					<span class="hamburguer"></span>
+				</div>
+				<nav>
+					<ul class="menu">
+						<li class="item-menu"><a class="link-menu" href="index.html">HOME</a></li>
+						<li class="item-menu"><a class="link-menu" href="buscar.html">BUSCAR UM PET</a></li>
+						<li class="item-menu"><a class="link-menu" href="sobre.html">SOBRE</a></li>
+						<li class="item-menu"><a class="link-menu" href="contato.html">CONTATO</a></li>
+					</ul>
+				</nav>
+			</label>
+
 		</header>
 
-		<div class="container">
+		<div id="principal">
 			<form id="contato" method="POST">
-				<h3>Contato</h3>
+				<h2>Contato</h2>
 				<h4>Preencha o formulário abaixo e clique em enviar:</h4>
+
+				<legend>Seus dados</legend>
 				<fieldset>
-					<input placeholder="Seu Nome" type="text" tabindex="1" required autofocus>
-				</fieldset>
-				<fieldset>
-					<input placeholder="Seu E-mail" type="email" tabindex="2" required="">
-				</fieldset>
-				<fieldset>
-					<input placeholder="Assunto da Mensagem" type="text" tabindex="3" required>
-				</fieldset>
-				<fieldset>
-					<textarea placeholder="Texto da Mensagem" type="email" tabindex="4" required></textarea>
-				</fieldset>
-				<fieldset>
-				<input type="checkbox" name="assinatura" id="ass" value="Assinatura de Newsletter">
-				<label for="ass">Deseja receber informações do Adote um Pet do If?</label>
-                </fieldset>
-                <fieldset>
-                	<button name="submit" type="submit" id="contato-submit" data-submit="...Sending">ENVIAR</button>
-                </fieldset>
+					<div class="input-block">
+						<label for="name">Nome completo</label>
+						<input name="name" id="name" type="text" required>
+					</div>
+					<div class="input-block">
+						<label for="e-mail">E-mail</label>
+						<input name="email" id="email" type="email" required>
+					</div>
+					<div class="input-block">
+						<label for="whatsapp">Whatsapp <small>(somente números)</small></label>
+						<input name="whatsapp" id="whatsaap" type="number" required>
+					</div>
+					<div class="input-block">
+						<label for="mensagem-ass">Assunto da Mensagem</label>
+						<input name="mensagem-ass" id="ass" type="text">
+					</div>
+					<div class="textarea-block">
+						<label for="mensagem-text">Texto da Mensagem</label>
+						<textarea name="mensagem-text" id="text" type="text" required></textarea>
+					</div>
+					<fieldset class="newsletter">
+						<input type="checkbox" name="assinatura" id="ass" value="Assinatura de Newsletter">
+						<label for="ass">Deseja receber informações do Adote um Pet do If?</label>
+					</fieldset>
+					<fieldset>
+						<button name="submit" type="submit" id="contato-submit" data-submit="...Sending">ENVIAR</button>
+					</fieldset>
 			</form>
 		</div>
+
 		<footer>
-       <div id="contatos">
-       <div id="email">
-          <a href="">adoteumpetdoif@gmail.com</a>
-       </div>
-       <div id="social">
-          <a href="https://www.google.com/search?q=instagram"><img src="imagens/Instagram.webp" alt=""></a>
-          <a href="https://www.google.com/search?q=facebook"><img src="imagens/Facebook.png" alt=""></a>
-          <a href="https://www.google.com/search?q=twitter"><img src="imagens/Twitter.webp" alt=""></a>
-        </div>
-      </div>
-    </footer>
-    </body>
+
+			<div id="contatos">
+				<div id="social">
+					<a class="link-rodape" href="https://instagram.com/adoteumpetdoif?utm_medium=copy_link">
+						<img class="img-rodape" src="images/instagram.png" alt="">
+					</a>
+					<a class="link-rodape" href="https://www.facebook.com/AdoteumPetdoIF/">
+						<img class="img-rodape" src="images/facebook.png" alt="">
+					</a>
+					<a class="link-rodape" href="https://www.google.com/search?q=twitter">
+						<img class="img-rodape" src="images/twitter.png" alt="">
+					</a>
+				</div>
+
+				<div id="email">
+					<a class="link-email" href="">adoteumpetdoif@gmail.com</a>
+				</div>
+				©Desenvolvido por Angelo, Denise e João Vitor
+
+			</div>
+		</footer>
+	</div>
+</body>
+
 </html>
